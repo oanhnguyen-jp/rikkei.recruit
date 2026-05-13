@@ -14,414 +14,437 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <!-- AOS Animation -->
+  <!-- AOS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
+    html{
+      scroll-behavior:smooth;
     }
 
-    body {
-      font-family: 'Be Vietnam Pro', sans-serif;
-      background: #f5f5f5;
-      color: #222;
-      overflow-x: hidden;
+    body{
+      font-family:'Be Vietnam Pro',sans-serif;
+      background:#0f172a;
+      color:white;
+      overflow-x:hidden;
     }
 
-    img {
-      width: 100%;
-      display: block;
+    a{
+      text-decoration:none;
     }
 
-    a {
-      text-decoration: none;
+    /* ========================= */
+    /* BACKGROUND EFFECT */
+    /* ========================= */
+
+    body::before{
+      content:'';
+      position:fixed;
+      width:700px;
+      height:700px;
+      background:#e60023;
+      filter:blur(180px);
+      opacity:0.15;
+      top:-200px;
+      left:-200px;
+      z-index:-1;
+    }
+
+    body::after{
+      content:'';
+      position:fixed;
+      width:600px;
+      height:600px;
+      background:#2563eb;
+      filter:blur(180px);
+      opacity:0.12;
+      bottom:-200px;
+      right:-200px;
+      z-index:-1;
     }
 
     /* ========================= */
     /* NAVBAR */
     /* ========================= */
 
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 999;
-      padding: 20px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(0, 0, 0, 0.15);
-      backdrop-filter: blur(12px);
+    .navbar{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      z-index:999;
+      padding:22px 8%;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      backdrop-filter:blur(16px);
+      background:rgba(255,255,255,0.05);
+
+      border-bottom:1px solid rgba(255,255,255,0.08);
     }
 
-    .logo {
-      color: white;
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: 1px;
+    .logo{
+      font-size:28px;
+      font-weight:800;
+      letter-spacing:1px;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 30px;
+    .nav-links{
+      display:flex;
+      gap:28px;
     }
 
-    .nav-links a {
-      color: white;
-      font-weight: 500;
-      transition: 0.3s;
+    .nav-links a{
+      color:white;
+      opacity:0.85;
+      transition:0.3s;
+      font-weight:500;
     }
 
-    .nav-links a:hover {
-      opacity: 0.7;
+    .nav-links a:hover{
+      opacity:1;
     }
 
     /* ========================= */
     /* HERO */
     /* ========================= */
 
-    .hero {
-      position: relative;
-      min-height: 100vh;
+    .hero{
+      min-height:100vh;
 
-      background:
-        linear-gradient(to bottom,
-          rgba(0, 0, 0, 0.2),
-          rgba(0, 0, 0, 0.75)),
-        url('assets/images/hero.jpg') center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      padding:0 20px;
 
-      overflow: hidden;
-      padding: 0 20px;
+      position:relative;
+      overflow:hidden;
     }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      width: 700px;
-      height: 700px;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 50%;
-      filter: blur(100px);
-      top: -250px;
-      right: -100px;
+    .hero-circle{
+      position:absolute;
+      border-radius:50%;
+      filter:blur(80px);
+      opacity:0.25;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 900px;
+    .circle1{
+      width:400px;
+      height:400px;
+      background:#e60023;
+      top:120px;
+      left:10%;
     }
 
-    .hero-subtitle {
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 20px;
-      margin-bottom: 20px;
-      letter-spacing: 2px;
+    .circle2{
+      width:350px;
+      height:350px;
+      background:#3b82f6;
+      bottom:100px;
+      right:10%;
     }
 
-    .hero h1 {
-      font-size: 76px;
-      line-height: 1.1;
-      color: white;
-      font-weight: 800;
-      margin-bottom: 30px;
-      letter-spacing: -2px;
+    .hero-content{
+      max-width:1000px;
+      z-index:2;
     }
 
-    .hero p {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 22px;
-      line-height: 1.8;
-      max-width: 760px;
-      margin: auto;
+    .hero-subtitle{
+      color:#94a3b8;
+      font-size:18px;
+      letter-spacing:4px;
+      margin-bottom:24px;
+      text-transform:uppercase;
     }
 
-    .hero-buttons {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+    .hero h1{
+      font-size:82px;
+      line-height:1.05;
+      font-weight:800;
+      margin-bottom:30px;
+
+      background:linear-gradient(to right,#fff,#cbd5e1);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
     }
 
-    .btn {
-      padding: 16px 34px;
-      border-radius: 999px;
-      font-weight: 600;
-      transition: 0.3s;
+    .hero p{
+      font-size:22px;
+      line-height:1.8;
+      color:#cbd5e1;
+
+      max-width:800px;
+      margin:auto;
     }
 
-    .btn-primary {
-      background: #e60023;
-      color: white;
+    .hero-buttons{
+      margin-top:42px;
+
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
     }
 
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      background: #cc001f;
+    .btn{
+      padding:16px 34px;
+      border-radius:999px;
+      font-weight:600;
+      transition:0.3s;
     }
 
-    .btn-secondary {
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      color: white;
-      backdrop-filter: blur(10px);
+    .btn-primary{
+      background:#e60023;
+      color:white;
+      box-shadow:0 10px 30px rgba(230,0,35,0.35);
     }
 
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
+    .btn-primary:hover{
+      transform:translateY(-4px);
+    }
+
+    .btn-secondary{
+      border:1px solid rgba(255,255,255,0.15);
+      background:rgba(255,255,255,0.04);
+      color:white;
+      backdrop-filter:blur(10px);
+    }
+
+    .btn-secondary:hover{
+      background:rgba(255,255,255,0.08);
     }
 
     /* ========================= */
     /* SECTION */
     /* ========================= */
 
-    section {
-      padding: 110px 8%;
+    section{
+      padding:110px 8%;
+      position:relative;
     }
 
-    .section-title {
-      text-align: center;
-      font-size: 48px;
-      font-weight: 800;
-      margin-bottom: 24px;
-      color: #111;
+    .section-title{
+      text-align:center;
+      font-size:52px;
+      font-weight:800;
+      margin-bottom:24px;
     }
 
-    .section-desc {
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-      font-size: 18px;
-      color: #666;
-      line-height: 1.9;
-    }
+    .section-desc{
+      text-align:center;
+      max-width:850px;
+      margin:auto;
 
-    /* ========================= */
-    /* GALLERY */
-    /* ========================= */
+      font-size:18px;
+      line-height:1.9;
 
-    .gallery-grid {
-      margin-top: 60px;
-
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .gallery-card {
-      overflow: hidden;
-      border-radius: 28px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-      position: relative;
-    }
-
-    .gallery-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 0.5s;
-    }
-
-    .gallery-card:hover img {
-      transform: scale(1.05);
-    }
-
-    .gallery-card.large {
-      grid-column: span 2;
-      grid-row: span 2;
+      color:#cbd5e1;
     }
 
     /* ========================= */
-    /* OFFICES */
+    /* CARDS */
     /* ========================= */
 
-    .office-grid {
-      margin-top: 60px;
+    .grid{
+      margin-top:60px;
 
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:28px;
     }
 
-    .office-card {
-      background: white;
-      border-radius: 28px;
-      padding: 36px;
-      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
-      transition: 0.3s;
+    .card{
+      position:relative;
+
+      background:rgba(255,255,255,0.05);
+
+      border:1px solid rgba(255,255,255,0.08);
+
+      border-radius:28px;
+
+      padding:40px;
+
+      backdrop-filter:blur(16px);
+
+      transition:0.4s;
+
+      overflow:hidden;
     }
 
-    .office-card:hover {
-      transform: translateY(-8px);
+    .card::before{
+      content:'';
+      position:absolute;
+
+      width:160px;
+      height:160px;
+
+      background:rgba(255,255,255,0.05);
+
+      border-radius:50%;
+
+      top:-60px;
+      right:-60px;
     }
 
-    .office-card h3 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #e60023;
+    .card:hover{
+      transform:translateY(-10px);
+      border-color:rgba(255,255,255,0.18);
     }
 
-    .office-card p {
-      color: #666;
-      line-height: 2;
-      font-size: 17px;
+    .card h3{
+      font-size:28px;
+      margin-bottom:24px;
+      color:white;
     }
 
-    /* ========================= */
-    /* JOBS */
-    /* ========================= */
-
-    .job-grid {
-      margin-top: 60px;
-
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
+    .card p{
+      color:#cbd5e1;
+      line-height:1.9;
+      margin-bottom:18px;
     }
 
-    .job-card {
-      background: white;
-      border-radius: 28px;
-      padding: 36px;
-      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
-      transition: 0.3s;
+    .card ul{
+      padding-left:18px;
     }
 
-    .job-card:hover {
-      transform: translateY(-8px);
-    }
-
-    .job-card h3 {
-      color: #e60023;
-      font-size: 26px;
-      margin-bottom: 20px;
-    }
-
-    .job-card ul {
-      padding-left: 18px;
-    }
-
-    .job-card li {
-      margin-bottom: 14px;
-      color: #555;
+    .card li{
+      color:#cbd5e1;
+      margin-bottom:14px;
+      line-height:1.8;
     }
 
     /* ========================= */
     /* HIGHLIGHT */
     /* ========================= */
 
-    .highlight {
+    .highlight{
       background:
-        linear-gradient(135deg,
-          #e60023,
-          #ff5f6d);
+      linear-gradient(
+        135deg,
+        rgba(230,0,35,0.9),
+        rgba(59,130,246,0.9)
+      );
 
-      border-radius: 40px;
-      padding: 80px 50px;
-      text-align: center;
-      color: white;
+      border-radius:40px;
+
+      padding:90px 50px;
+
+      text-align:center;
+
+      position:relative;
+      overflow:hidden;
     }
 
-    .highlight h2 {
-      font-size: 52px;
-      margin-bottom: 24px;
+    .highlight::before{
+      content:'';
+      position:absolute;
+
+      width:500px;
+      height:500px;
+
+      background:rgba(255,255,255,0.08);
+
+      border-radius:50%;
+
+      top:-250px;
+      right:-100px;
     }
 
-    .highlight p {
-      max-width: 800px;
-      margin: auto;
-      font-size: 20px;
-      line-height: 1.9;
-      opacity: 0.95;
+    .highlight h2{
+      font-size:56px;
+      margin-bottom:26px;
+      position:relative;
+      z-index:2;
+    }
+
+    .highlight p{
+      font-size:20px;
+      line-height:1.9;
+
+      max-width:850px;
+      margin:auto;
+
+      position:relative;
+      z-index:2;
     }
 
     /* ========================= */
     /* FOOTER */
     /* ========================= */
 
-    footer {
-      background: #111;
-      color: white;
-      padding: 80px 8%;
-      text-align: center;
+    footer{
+      padding:90px 8%;
+      text-align:center;
+
+      border-top:1px solid rgba(255,255,255,0.08);
     }
 
-    footer h3 {
-      font-size: 34px;
-      margin-bottom: 20px;
+    footer h3{
+      font-size:34px;
+      margin-bottom:20px;
     }
 
-    footer p {
-      opacity: 0.8;
-      margin-bottom: 10px;
+    footer p{
+      color:#94a3b8;
+      margin-bottom:12px;
+      line-height:1.8;
     }
 
-    footer a {
-      color: #ffccd5;
+    footer a{
+      color:#cbd5e1;
     }
 
     /* ========================= */
     /* MOBILE */
     /* ========================= */
 
-    @media(max-width:768px) {
+    @media(max-width:768px){
 
-      .navbar {
-        padding: 18px 5%;
+      .navbar{
+        padding:18px 5%;
       }
 
-      .nav-links {
-        display: none;
+      .nav-links{
+        display:none;
       }
 
-      .hero h1 {
-        font-size: 48px;
+      .hero h1{
+        font-size:48px;
       }
 
-      .hero p {
-        font-size: 18px;
+      .hero p{
+        font-size:18px;
       }
 
-      .section-title {
-        font-size: 34px;
+      .section-title{
+        font-size:38px;
       }
 
-      .gallery-grid {
-        grid-template-columns: 1fr;
+      .highlight h2{
+        font-size:40px;
       }
 
-      .gallery-card.large {
-        grid-column: auto;
-        grid-row: auto;
+      .highlight{
+        padding:60px 24px;
       }
 
-      .highlight {
-        padding: 60px 25px;
-      }
-
-      .highlight h2 {
-        font-size: 36px;
-      }
-
-      .highlight p {
-        font-size: 18px;
+      .highlight p{
+        font-size:18px;
       }
 
     }
   </style>
+
 </head>
 
 <body>
@@ -448,6 +471,9 @@
 
   <section class="hero">
 
+    <div class="hero-circle circle1"></div>
+    <div class="hero-circle circle2"></div>
+
     <div class="hero-content" data-aos="fade-up">
 
       <div class="hero-subtitle">
@@ -461,7 +487,7 @@
 
       <p>
         A multicultural technology environment where innovation,
-        people, and career growth come together across Japan and global offices.
+        people and career growth come together across Japan and global offices.
       </p>
 
       <div class="hero-buttons">
@@ -489,30 +515,62 @@
   <section>
 
     <h2 class="section-title" data-aos="fade-up">
-      🌸 Life at Rikkei Japan
+      🌸 About Rikkei Japan
     </h2>
 
     <p class="section-desc" data-aos="fade-up">
-      We are building a young, dynamic and international environment where every member
-      can grow professionally and personally while creating impactful technology solutions in Japan.
+      We are building a dynamic international environment where every member can grow professionally,
+      challenge themselves and create impactful technology solutions for the Japanese market.
     </p>
 
-    <div class="gallery-grid">
+    <div class="grid">
 
-      <div class="gallery-card large" data-aos="zoom-in">
-        <img src="assets/images/team1.jpg">
+      <div class="card" data-aos="fade-up">
+
+        <h3>🤝 Human First</h3>
+
+        <p>
+          We believe people are the core of sustainable growth and innovation.
+        </p>
+
+        <ul>
+          <li>Supportive culture</li>
+          <li>Open communication</li>
+          <li>Career development</li>
+        </ul>
+
       </div>
 
-      <div class="gallery-card" data-aos="fade-up">
-        <img src="assets/images/office.jpg">
+      <div class="card" data-aos="fade-up">
+
+        <h3>🚀 Career Growth</h3>
+
+        <p>
+          Opportunities to work on large-scale projects and grow globally.
+        </p>
+
+        <ul>
+          <li>PM / Leader path</li>
+          <li>Global projects</li>
+          <li>Training & mentoring</li>
+        </ul>
+
       </div>
 
-      <div class="gallery-card" data-aos="fade-up">
-        <img src="assets/images/event.jpg">
-      </div>
+      <div class="card" data-aos="fade-up">
 
-      <div class="gallery-card" data-aos="fade-up">
-        <img src="assets/images/training.jpg">
+        <h3>🌏 Global Environment</h3>
+
+        <p>
+          Multicultural collaboration across Japan, Vietnam and international offices.
+        </p>
+
+        <ul>
+          <li>Japan × Vietnam culture</li>
+          <li>International teams</li>
+          <li>Global expansion</li>
+        </ul>
+
       </div>
 
     </div>
@@ -528,13 +586,12 @@
     </h2>
 
     <p class="section-desc" data-aos="fade-up">
-      Rikkei has expanded globally with offices across Japan, Vietnam,
-      Thailand and the United States.
+      Rikkei continues expanding globally with offices across Asia and the United States.
     </p>
 
-    <div class="office-grid">
+    <div class="grid">
 
-      <div class="office-card" data-aos="fade-up">
+      <div class="card" data-aos="fade-up">
 
         <h3>🇯🇵 Japan</h3>
 
@@ -547,7 +604,7 @@
 
       </div>
 
-      <div class="office-card" data-aos="fade-up">
+      <div class="card" data-aos="fade-up">
 
         <h3>🇻🇳 Vietnam</h3>
 
@@ -560,9 +617,9 @@
 
       </div>
 
-      <div class="office-card" data-aos="fade-up">
+      <div class="card" data-aos="fade-up">
 
-        <h3>🌏 Global</h3>
+        <h3>🌏 Global Network</h3>
 
         <p>
           Bangkok (Thailand)<br>
@@ -575,7 +632,7 @@
 
   </section>
 
-  <!-- JOBS -->
+  <!-- CAREERS -->
 
   <section>
 
@@ -584,13 +641,12 @@
     </h2>
 
     <p class="section-desc" data-aos="fade-up">
-      Explore exciting opportunities in engineering, management,
-      AI, digital transformation and corporate functions.
+      Explore exciting opportunities in engineering, AI, management and corporate functions.
     </p>
 
-    <div class="job-grid">
+    <div class="grid">
 
-      <div class="job-card" data-aos="fade-up">
+      <div class="card" data-aos="fade-up">
 
         <h3>💻 Engineering</h3>
 
@@ -604,7 +660,7 @@
 
       </div>
 
-      <div class="job-card" data-aos="fade-up">
+      <div class="card" data-aos="fade-up">
 
         <h3>🚀 Management</h3>
 
@@ -617,7 +673,7 @@
 
       </div>
 
-      <div class="job-card" data-aos="fade-up">
+      <div class="card" data-aos="fade-up">
 
         <h3>🏢 Corporate</h3>
 
@@ -645,8 +701,8 @@
       </h2>
 
       <p>
-        International projects, clear career paths, exciting technologies,
-        and a people-first culture that empowers every individual to grow together.
+        International projects, clear career paths, exciting technologies and a people-first culture
+        that empowers every individual to grow together.
       </p>
 
     </div>
@@ -682,7 +738,7 @@
 
   </footer>
 
-  <!-- AOS SCRIPT -->
+  <!-- AOS -->
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
