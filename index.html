@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="vi">
-
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rikkei Japan | 10th Anniversary Recruitment</title>
 
-  <title>Rikkei Japan Recruitment</title>
+  <!-- SEO -->
+  <meta name="description" content="Build Your Career In Japan With Rikkei Japan - Vietnamese Technology Spirit × Japanese Quality" />
+  <meta name="keywords" content="Rikkei Japan, Japan IT Jobs, BrSE, SE, Japanese Tech Company, Recruitment" />
 
-  <!-- FONT -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+
+    /* =========================================================
+       RESET
+    ========================================================== */
+
     *{
       margin:0;
       padding:0;
@@ -29,479 +32,1133 @@
     }
 
     body{
-      font-family:'Be Vietnam Pro',sans-serif;
-      background:#0f172a;
-      color:white;
+      font-family:'Be Vietnam Pro','Noto Sans JP',sans-serif;
+      background:
+        radial-gradient(circle at top left,#ffdce9 0%,transparent 35%),
+        radial-gradient(circle at bottom right,#ffeef4 0%,transparent 30%),
+        #fff;
+      color:#222;
       overflow-x:hidden;
+      line-height:1.7;
+    }
+
+    img{
+      max-width:100%;
     }
 
     a{
       text-decoration:none;
     }
 
-    /* ========================= */
-    /* BACKGROUND EFFECT */
-    /* ========================= */
+    section{
+      position:relative;
+      padding:110px 8%;
+      overflow:hidden;
+    }
 
-    body::before{
-      content:'';
-      position:fixed;
-      width:700px;
-      height:700px;
-      background:#e60023;
-      filter:blur(180px);
-      opacity:0.15;
-      top:-200px;
-      left:-200px;
+    h1,h2,h3,h4{
+      font-family:'Montserrat',sans-serif;
+      letter-spacing:-0.02em;
+    }
+
+    .container{
+      max-width:1300px;
+      margin:auto;
+    }
+
+    /* =========================================================
+       FLOATING BACKGROUND
+    ========================================================== */
+
+    .blob{
+      position:absolute;
+      border-radius:50%;
+      filter:blur(70px);
+      opacity:.35;
+      animation:float 10s ease-in-out infinite;
       z-index:-1;
     }
 
-    body::after{
-      content:'';
-      position:fixed;
-      width:600px;
-      height:600px;
-      background:#2563eb;
-      filter:blur(180px);
-      opacity:0.12;
-      bottom:-200px;
-      right:-200px;
-      z-index:-1;
+    .blob1{
+      width:350px;
+      height:350px;
+      background:#ffb6d2;
+      top:-100px;
+      left:-120px;
     }
 
-    /* ========================= */
-    /* NAVBAR */
-    /* ========================= */
+    .blob2{
+      width:300px;
+      height:300px;
+      background:#ffdce8;
+      right:-100px;
+      top:200px;
+      animation-delay:2s;
+    }
 
-    .navbar{
+    .blob3{
+      width:260px;
+      height:260px;
+      background:#ffc7dd;
+      bottom:-80px;
+      left:40%;
+      animation-delay:4s;
+    }
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0px) translateX(0px);
+      }
+      50%{
+        transform:translateY(-25px) translateX(20px);
+      }
+    }
+
+    /* =========================================================
+       NAVBAR
+    ========================================================== */
+
+    nav{
       position:fixed;
+      width:100%;
       top:0;
       left:0;
-      width:100%;
       z-index:999;
-      padding:22px 8%;
-
+      padding:18px 7%;
       display:flex;
       justify-content:space-between;
       align-items:center;
-
-      backdrop-filter:blur(16px);
-      background:rgba(255,255,255,0.05);
-
-      border-bottom:1px solid rgba(255,255,255,0.08);
+      background:rgba(255,255,255,.65);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(255,255,255,.4);
     }
 
     .logo{
-      font-size:28px;
+      font-size:1.4rem;
       font-weight:800;
-      letter-spacing:1px;
+      color:#ff4f8b;
+      letter-spacing:2px;
     }
 
     .nav-links{
       display:flex;
-      gap:28px;
+      gap:30px;
+      align-items:center;
     }
 
     .nav-links a{
-      color:white;
-      opacity:0.85;
-      transition:0.3s;
+      color:#333;
       font-weight:500;
+      transition:.3s;
     }
 
     .nav-links a:hover{
-      opacity:1;
+      color:#ff4f8b;
     }
 
-    /* ========================= */
-    /* HERO */
-    /* ========================= */
+    .nav-btn{
+      padding:12px 24px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#ff73a8,#ff4f8b);
+      color:#fff !important;
+      box-shadow:0 10px 30px rgba(255,79,139,.25);
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================== */
 
     .hero{
       min-height:100vh;
-
       display:flex;
       align-items:center;
-      justify-content:center;
-      text-align:center;
-
-      padding:0 20px;
-
       position:relative;
-      overflow:hidden;
+      padding-top:140px;
+      background:
+        linear-gradient(rgba(255,255,255,.35),rgba(255,255,255,.5)),
+        linear-gradient(135deg,#fff0f6,#ffe4ee,#ffffff);
     }
 
-    .hero-circle{
+    .hero::before{
+      content:"";
       position:absolute;
-      border-radius:50%;
-      filter:blur(80px);
-      opacity:0.25;
-    }
-
-    .circle1{
-      width:400px;
-      height:400px;
-      background:#e60023;
-      top:120px;
-      left:10%;
-    }
-
-    .circle2{
-      width:350px;
-      height:350px;
-      background:#3b82f6;
-      bottom:100px;
-      right:10%;
+      inset:0;
+      background:
+      radial-gradient(circle at 20% 20%,rgba(255,255,255,.8),transparent 30%),
+      radial-gradient(circle at 80% 30%,rgba(255,182,210,.45),transparent 30%);
+      z-index:0;
     }
 
     .hero-content{
-      max-width:1000px;
+      position:relative;
       z-index:2;
+      max-width:760px;
     }
 
-    .hero-subtitle{
-      color:#94a3b8;
-      font-size:18px;
-      letter-spacing:4px;
+    .badge{
+      display:inline-block;
+      padding:10px 20px;
+      border-radius:999px;
+      background:rgba(255,255,255,.45);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,.6);
+      color:#ff4f8b;
+      font-weight:700;
       margin-bottom:24px;
-      text-transform:uppercase;
+      box-shadow:0 10px 30px rgba(255,105,150,.12);
     }
 
     .hero h1{
-      font-size:82px;
+      font-size:clamp(3rem,7vw,6rem);
       line-height:1.05;
-      font-weight:800;
-      margin-bottom:30px;
+      margin-bottom:24px;
+      color:#1d1d1d;
+    }
 
-      background:linear-gradient(to right,#fff,#cbd5e1);
+    .hero h1 span{
+      background:linear-gradient(135deg,#ff4f8b,#ff88b6);
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
     }
 
-    .hero p{
-      font-size:22px;
-      line-height:1.8;
-      color:#cbd5e1;
-
-      max-width:800px;
-      margin:auto;
+    .subtitle{
+      font-size:1.2rem;
+      color:#555;
+      margin-bottom:40px;
+      max-width:640px;
     }
 
     .hero-buttons{
-      margin-top:42px;
-
       display:flex;
-      justify-content:center;
-      gap:20px;
+      gap:18px;
       flex-wrap:wrap;
     }
 
     .btn{
-      padding:16px 34px;
-      border-radius:999px;
-      font-weight:600;
-      transition:0.3s;
+      padding:16px 32px;
+      border-radius:18px;
+      font-weight:700;
+      transition:.4s;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
     }
 
     .btn-primary{
-      background:#e60023;
-      color:white;
-      box-shadow:0 10px 30px rgba(230,0,35,0.35);
-    }
-
-    .btn-primary:hover{
-      transform:translateY(-4px);
+      background:linear-gradient(135deg,#ff5d97,#ff82b4);
+      color:#fff;
+      box-shadow:0 15px 40px rgba(255,90,140,.28);
     }
 
     .btn-secondary{
-      border:1px solid rgba(255,255,255,0.15);
-      background:rgba(255,255,255,0.04);
-      color:white;
-      backdrop-filter:blur(10px);
+      background:rgba(255,255,255,.55);
+      border:1px solid rgba(255,255,255,.5);
+      backdrop-filter:blur(12px);
+      color:#333;
     }
 
-    .btn-secondary:hover{
-      background:rgba(255,255,255,0.08);
+    .btn:hover{
+      transform:translateY(-4px) scale(1.02);
     }
 
-    /* ========================= */
-    /* SECTION */
-    /* ========================= */
+    /* =========================================================
+       SAKURA
+    ========================================================== */
 
-    section{
-      padding:110px 8%;
-      position:relative;
+    .sakura{
+      position:absolute;
+      width:14px;
+      height:14px;
+      background:rgba(255,183,207,.8);
+      border-radius:0 100% 0 100%;
+      animation:fall linear infinite;
+      opacity:.8;
     }
+
+    @keyframes fall{
+      0%{
+        transform:translateY(-10vh) rotate(0deg);
+      }
+      100%{
+        transform:translateY(120vh) rotate(360deg);
+      }
+    }
+
+    /* =========================================================
+       SECTION TITLE
+    ========================================================== */
 
     .section-title{
       text-align:center;
-      font-size:52px;
-      font-weight:800;
-      margin-bottom:24px;
+      margin-bottom:70px;
     }
 
-    .section-desc{
-      text-align:center;
-      max-width:850px;
-      margin:auto;
-
-      font-size:18px;
-      line-height:1.9;
-
-      color:#cbd5e1;
-    }
-
-    /* ========================= */
-    /* CARDS */
-    /* ========================= */
-
-    .grid{
-      margin-top:60px;
-
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:28px;
-    }
-
-    .card{
-      position:relative;
-
-      background:rgba(255,255,255,0.05);
-
-      border:1px solid rgba(255,255,255,0.08);
-
-      border-radius:28px;
-
-      padding:40px;
-
-      backdrop-filter:blur(16px);
-
-      transition:0.4s;
-
-      overflow:hidden;
-    }
-
-    .card::before{
-      content:'';
-      position:absolute;
-
-      width:160px;
-      height:160px;
-
-      background:rgba(255,255,255,0.05);
-
-      border-radius:50%;
-
-      top:-60px;
-      right:-60px;
-    }
-
-    .card:hover{
-      transform:translateY(-10px);
-      border-color:rgba(255,255,255,0.18);
-    }
-
-    .card h3{
-      font-size:28px;
-      margin-bottom:24px;
-      color:white;
-    }
-
-    .card p{
-      color:#cbd5e1;
-      line-height:1.9;
+    .section-title h2{
+      font-size:clamp(2rem,4vw,3.4rem);
       margin-bottom:18px;
     }
 
-    .card ul{
-      padding-left:18px;
+    .section-title p{
+      color:#666;
+      max-width:760px;
+      margin:auto;
     }
 
-    .card li{
-      color:#cbd5e1;
-      margin-bottom:14px;
-      line-height:1.8;
+    /* =========================================================
+       GLASS CARD
+    ========================================================== */
+
+    .glass-card{
+      background:rgba(255,255,255,.55);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,.5);
+      border-radius:28px;
+      box-shadow:0 20px 50px rgba(0,0,0,.06);
     }
 
-    /* ========================= */
-    /* HIGHLIGHT */
-    /* ========================= */
+    /* =========================================================
+       ABOUT / TIMELINE
+    ========================================================== */
 
-    .highlight{
+    .timeline{
+      position:relative;
+      max-width:1000px;
+      margin:auto;
+    }
+
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left:50%;
+      width:4px;
+      height:100%;
+      transform:translateX(-50%);
+      background:linear-gradient(to bottom,#ff7dab,#ffd3e3);
+    }
+
+    .timeline-item{
+      width:50%;
+      padding:30px;
+      position:relative;
+    }
+
+    .timeline-item:nth-child(odd){
+      left:0;
+    }
+
+    .timeline-item:nth-child(even){
+      left:50%;
+    }
+
+    .timeline-content{
+      padding:35px;
+      position:relative;
+      transition:.4s;
+    }
+
+    .timeline-content:hover{
+      transform:translateY(-8px);
+    }
+
+    .timeline-year{
+      color:#ff4f8b;
+      font-size:1.3rem;
+      font-weight:800;
+      margin-bottom:12px;
+    }
+
+    .timeline-dot{
+      width:22px;
+      height:22px;
+      background:#ff4f8b;
+      border:5px solid #fff;
+      border-radius:50%;
+      position:absolute;
+      top:50px;
+      right:-11px;
+      z-index:5;
+      box-shadow:0 0 0 10px rgba(255,79,139,.12);
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot{
+      left:-11px;
+    }
+
+    /* =========================================================
+       JOBS
+    ========================================================== */
+
+    .jobs-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+    }
+
+    .job-card{
+      padding:35px;
+      position:relative;
+      overflow:hidden;
+      transition:.4s;
+    }
+
+    .job-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(135deg,rgba(255,125,171,.08),transparent);
+      opacity:0;
+      transition:.4s;
+    }
+
+    .job-card:hover{
+      transform:translateY(-10px) scale(1.02);
+      box-shadow:0 25px 60px rgba(255,79,139,.18);
+      border:1px solid rgba(255,125,171,.4);
+    }
+
+    .job-card:hover::before{
+      opacity:1;
+    }
+
+    .job-top{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:flex-start;
+      margin-bottom:20px;
+    }
+
+    .job-title{
+      font-size:1.4rem;
+      font-weight:700;
+    }
+
+    .badge-small{
+      background:#ffe4ee;
+      color:#ff4f8b;
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:.85rem;
+      font-weight:700;
+    }
+
+    .job-tags{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-bottom:25px;
+    }
+
+    .tag{
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.6);
+      border:1px solid rgba(255,255,255,.5);
+      font-size:.82rem;
+      font-weight:600;
+    }
+
+    .job-card ul{
+      padding-left:20px;
+      margin-bottom:18px;
+    }
+
+    .job-card li{
+      margin-bottom:8px;
+      color:#555;
+    }
+
+    /* =========================================================
+       CAMPAIGN
+    ========================================================== */
+
+    .campaign{
       background:
-      linear-gradient(
-        135deg,
-        rgba(230,0,35,0.9),
-        rgba(59,130,246,0.9)
-      );
-
-      border-radius:40px;
-
-      padding:90px 50px;
-
+      linear-gradient(135deg,#ff5f96,#ff84b5,#ffd5e4);
+      color:#fff;
       text-align:center;
-
+      border-radius:40px;
       position:relative;
       overflow:hidden;
     }
 
-    .highlight::before{
-      content:'';
+    .campaign::before{
+      content:"";
       position:absolute;
-
-      width:500px;
-      height:500px;
-
-      background:rgba(255,255,255,0.08);
-
+      width:300px;
+      height:300px;
+      background:rgba(255,255,255,.18);
       border-radius:50%;
-
-      top:-250px;
-      right:-100px;
+      top:-100px;
+      right:-80px;
+      filter:blur(10px);
     }
 
-    .highlight h2{
-      font-size:56px;
-      margin-bottom:26px;
-      position:relative;
-      z-index:2;
+    .campaign h2{
+      font-size:clamp(3rem,8vw,6rem);
+      margin-bottom:10px;
+      animation:glow 3s ease infinite;
     }
 
-    .highlight p{
-      font-size:20px;
-      line-height:1.9;
-
-      max-width:850px;
-      margin:auto;
-
-      position:relative;
-      z-index:2;
+    @keyframes glow{
+      0%,100%{
+        text-shadow:0 0 10px rgba(255,255,255,.3);
+      }
+      50%{
+        text-shadow:0 0 30px rgba(255,255,255,.8);
+      }
     }
 
-    /* ========================= */
-    /* FOOTER */
-    /* ========================= */
+    /* =========================================================
+       CULTURE
+    ========================================================== */
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .feature-card{
+      padding:35px;
+      text-align:center;
+      transition:.4s;
+    }
+
+    .feature-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .feature-icon{
+      width:80px;
+      height:80px;
+      margin:auto auto 22px;
+      border-radius:24px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,#ffd3e3,#fff);
+      font-size:2rem;
+    }
+
+    /* =========================================================
+       OFFICES
+    ========================================================== */
+
+    .office-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:25px;
+    }
+
+    .office-card{
+      padding:32px;
+      transition:.4s;
+    }
+
+    .office-card:hover{
+      transform:translateY(-6px);
+    }
+
+    .office-card h3{
+      margin-bottom:18px;
+      color:#ff4f8b;
+    }
+
+    /* =========================================================
+       CTA
+    ========================================================== */
+
+    .cta{
+      text-align:center;
+      background:
+      linear-gradient(135deg,#fff0f5,#ffe0ec,#ffffff);
+      border-radius:40px;
+    }
+
+    .cta h2{
+      font-size:clamp(2.2rem,5vw,4rem);
+      margin-bottom:24px;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================== */
 
     footer{
-      padding:90px 8%;
+      padding:50px 8%;
+      background:#fff5f9;
       text-align:center;
-
-      border-top:1px solid rgba(255,255,255,0.08);
-    }
-
-    footer h3{
-      font-size:34px;
-      margin-bottom:20px;
-    }
-
-    footer p{
-      color:#94a3b8;
-      margin-bottom:12px;
-      line-height:1.8;
+      border-top:1px solid #ffe1eb;
     }
 
     footer a{
-      color:#cbd5e1;
+      color:#ff4f8b;
     }
 
-    /* ========================= */
-    /* MOBILE */
-    /* ========================= */
+    /* =========================================================
+       REVEAL ANIMATION
+    ========================================================== */
 
-    @media(max-width:768px){
+    .reveal{
+      opacity:0;
+      transform:translateY(50px);
+      transition:1s ease;
+    }
 
-      .navbar{
-        padding:18px 5%;
+    .reveal.active{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    /* =========================================================
+       MOBILE
+    ========================================================== */
+
+    @media(max-width:900px){
+
+      .timeline::before{
+        left:20px;
+      }
+
+      .timeline-item{
+        width:100%;
+        left:0 !important;
+        padding-left:60px;
+      }
+
+      .timeline-dot{
+        left:10px !important;
       }
 
       .nav-links{
         display:none;
       }
 
-      .hero h1{
-        font-size:48px;
+      section{
+        padding:90px 6%;
       }
 
-      .hero p{
-        font-size:18px;
+      .hero{
+        text-align:center;
       }
 
-      .section-title{
-        font-size:38px;
-      }
-
-      .highlight h2{
-        font-size:40px;
-      }
-
-      .highlight{
-        padding:60px 24px;
-      }
-
-      .highlight p{
-        font-size:18px;
+      .hero-buttons{
+        justify-content:center;
       }
 
     }
-  </style>
 
+  </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
+  <!-- Floating Background -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
 
-  <nav class="navbar">
+  <!-- =========================================================
+       NAVBAR
+  ========================================================== -->
 
-    <div class="logo">
-      RKJ
-    </div>
+  <nav>
+    <div class="logo">RIKKEI JAPAN</div>
 
     <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Offices</a>
-      <a href="#">Careers</a>
-      <a href="#">Contact</a>
+      <a href="#about">About</a>
+      <a href="#jobs">Jobs</a>
+      <a href="#culture">Culture</a>
+      <a href="#office">Offices</a>
+      <a class="nav-btn" href="https://www.facebook.com/rikkei.japan.hr" target="_blank">Apply Now</a>
     </div>
-
   </nav>
 
-  <!-- HERO -->
+  <!-- =========================================================
+       HERO SECTION
+  ========================================================== -->
 
   <section class="hero">
 
-    <div class="hero-circle circle1"></div>
-    <div class="hero-circle circle2"></div>
+    <div class="container hero-content">
 
-    <div class="hero-content" data-aos="fade-up">
-
-      <div class="hero-subtitle">
-        RIKKEI JAPAN RECRUITMENT
+      <div class="badge">
+        10th Anniversary 2016 - 2026
       </div>
 
       <h1>
-        Grow Together<br>
-        With Rikkei Japan
+        Build Your Career <br>
+        In Japan With <span id="typing"></span>
       </h1>
 
-      <p>
-        A multicultural technology environment where innovation,
-        people and career growth come together across Japan and global offices.
+      <p class="subtitle">
+        Vietnamese Technology Spirit × Japanese Quality
       </p>
 
       <div class="hero-buttons">
+        <a href="https://www.facebook.com/rikkei.japan.hr" target="_blank" class="btn btn-primary">
+          Apply Now
+        </a>
+
+        <a href="#jobs" class="btn btn-secondary">
+          Explore Jobs
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================================================
+       ABOUT
+  ========================================================== -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <div class="section-title reveal">
+        <h2>10 Years Journey In Japan</h2>
+        <p>
+          Modern Japanese Technology Company × Vietnamese Youthful Energy
+        </p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-content glass-card">
+            <div class="timeline-year">2016</div>
+
+            <h3>Beginning Of The Journey</h3>
+
+            <p>
+              Rikkei Japan was established and started building a strong technology foundation in the Japanese market.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-content glass-card">
+            <div class="timeline-year">Growth</div>
+
+            <h3>Technology & Trust</h3>
+
+            <p>
+              Rikkei Japan continuously strengthened its position through technology capability, responsibility, and deep understanding of Japanese culture.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-content glass-card">
+            <div class="timeline-year">Culture</div>
+
+            <h3>People First</h3>
+
+            <p>
+              The company grows with the dedication, initiative, and continuous improvement mindset of every member.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-content glass-card">
+            <div class="timeline-year">2026</div>
+
+            <h3>Happy 10th Anniversary</h3>
+
+            <p>
+              Ten years is not only a proud milestone, but also the beginning of a greater journey ahead.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:70px;" class="glass-card reveal">
+        <div style="padding:45px;">
+          <p>
+            Tròn 10 năm kể từ ngày thành lập, Rikkei Japan nhìn lại hành trình đã qua với niềm tự hào và biết ơn sâu sắc.
+            Một thập kỷ không chỉ đánh dấu sự trưởng thành về quy mô và năng lực, mà còn là chặng đường của bản lĩnh,
+            niềm tin và khát vọng vươn xa tại thị trường Nhật Bản.
+          </p>
+
+          <br>
+
+          <p>
+            Khởi đầu từ năm 2016, Rikkei Japan từng bước khẳng định vị thế bằng năng lực công nghệ vững vàng,
+            tinh thần trách nhiệm cao và sự thấu hiểu sâu sắc văn hóa bản địa.
+          </p>
+
+          <br>
+
+          <p>
+            Happy 10th Anniversary, Rikkei Japan!
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================================================
+       JOBS
+  ========================================================== -->
+
+  <section id="jobs">
+
+    <div class="container">
+
+      <div class="section-title reveal">
+        <h2>Career Opportunities</h2>
+        <p>
+          Join premium Japanese technology projects and build your future together with Rikkei Japan.
+        </p>
+      </div>
+
+      <div class="jobs-grid">
+
+        <!-- JOB -->
+        <div class="job-card glass-card reveal">
+          <div class="job-top">
+            <div class="job-title">OL / DM</div>
+            <div class="badge-small">04.2026</div>
+          </div>
+
+          <div class="job-tags">
+            <div class="tag">🇯🇵 JAPAN</div>
+            <div class="tag">Management</div>
+          </div>
+
+          <h4>Description</h4>
+          <ul>
+            <li>Manage project progress, quality and cost</li>
+            <li>Work directly with Japanese clients</li>
+            <li>Operate Onsite – Offshore model</li>
+          </ul>
+
+          <h4>Requirements</h4>
+          <ul>
+            <li>Strong Japanese communication</li>
+            <li>3+ years onsite/offshore management</li>
+            <li>PM/Infrastructure experience is a plus</li>
+          </ul>
+        </div>
+
+        <!-- JOB -->
+        <div class="job-card glass-card reveal">
+          <div class="job-top">
+            <div class="job-title">SM Presales</div>
+            <div class="badge-small">04.2026</div>
+          </div>
+
+          <div class="job-tags">
+            <div class="tag">📍 TOKYO</div>
+            <div class="tag">Presales</div>
+          </div>
+
+          <h4>Description</h4>
+          <ul>
+            <li>Support presales and clients</li>
+            <li>Lead requirement & system design</li>
+            <li>Vendor management support</li>
+          </ul>
+
+          <h4>Requirements</h4>
+          <ul>
+            <li>Retail/Supermarket experience</li>
+            <li>Upstream phase experience</li>
+            <li>Strong communication skill</li>
+          </ul>
+        </div>
+
+        <!-- JOB -->
+        <div class="job-card glass-card reveal">
+          <div class="job-top">
+            <div class="job-title">Sales IT</div>
+            <div class="badge-small">04.2026</div>
+          </div>
+
+          <div class="job-tags">
+            <div class="tag">🇯🇵 JAPAN</div>
+            <div class="tag">B2B</div>
+          </div>
+
+          <h4>Description</h4>
+          <ul>
+            <li>Work with Japanese clients</li>
+            <li>Quotation & contract management</li>
+            <li>Develop new customers</li>
+          </ul>
+
+          <h4>Requirements</h4>
+          <ul>
+            <li>3-4 years IT sales experience</li>
+            <li>JLPT N1</li>
+            <li>Negotiation skill</li>
+          </ul>
+        </div>
+
+        <!-- JOB -->
+        <div class="job-card glass-card reveal">
+          <div class="job-top">
+            <div class="job-title">AMA</div>
+            <div class="badge-small">04.2026</div>
+          </div>
+
+          <div class="job-tags">
+            <div class="tag">📍 TOKYO</div>
+            <div class="tag">Sales Support</div>
+          </div>
+
+          <h4>Description</h4>
+          <ul>
+            <li>Support sales procedures</li>
+            <li>Customer data management</li>
+            <li>Payment follow-up</li>
+          </ul>
+
+          <h4>Requirements</h4>
+          <ul>
+            <li>Strong Japanese communication</li>
+            <li>Careful & responsible</li>
+            <li>Sales mindset</li>
+          </ul>
+        </div>
+
+        <!-- JOB -->
+        <div class="job-card glass-card reveal">
+          <div class="job-top">
+            <div class="job-title">Security Engineer</div>
+            <div class="badge-small">07.2026</div>
+          </div>
+
+          <div class="job-tags">
+            <div class="tag">📍 NAGOYA</div>
+            <div class="tag">Security</div>
+          </div>
+
+          <h4>Description</h4>
+          <ul>
+            <li>Lead onsite security team</li>
+            <li>Work with Japanese clients</li>
+            <li>Deploy security projects</li>
+          </ul>
+
+          <h4>Requirements</h4>
+          <ul>
+            <li>PM experience</li>
+            <li>Security experience</li>
+            <li>Team coordination skill</li>
+          </ul>
+        </div>
+
+        <!-- JOB -->
+        <div class="job-card glass-card reveal">
+          <div class="job-top">
+            <div class="job-title">SE / BrSE</div>
+            <div class="badge-small">HOT JOB</div>
+          </div>
+
+          <div class="job-tags">
+            <div class="tag">Tokyo / Osaka / Nagoya</div>
+            <div class="tag">JLPT N2</div>
+          </div>
+
+          <h4>Description</h4>
+          <ul>
+            <li>System analysis & design</li>
+            <li>Coordinate offshore projects</li>
+            <li>Work with Japanese clients</li>
+          </ul>
+
+          <h4>Requirements</h4>
+          <ul>
+            <li>3+ years programming experience</li>
+            <li>JLPT N2</li>
+            <li>System design experience</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================================================
+       CAMPAIGN
+  ========================================================== -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="campaign glass-card reveal" style="padding:90px 30px;">
+
+        <h2>100万円</h2>
+
+        <h3 style="font-size:2rem;margin-bottom:16px;">
+          Signing Bonus
+        </h3>
+
+        <p style="font-size:1.2rem;margin-bottom:18px;">
+          Apply before 30.06.2026
+        </p>
+
+        <p style="font-weight:700;">
+          SE / BrSE | 3+ YOE | JLPT N2
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================================================
+       CULTURE
+  ========================================================== -->
+
+  <section id="culture">
+
+    <div class="container">
+
+      <div class="section-title reveal">
+        <h2>Why Join Rikkei Japan?</h2>
+      </div>
+
+      <div class="feature-grid">
+
+        <div class="feature-card glass-card reveal">
+          <div class="feature-icon">🇯🇵</div>
+          <h3>Japanese Projects</h3>
+        </div>
+
+        <div class="feature-card glass-card reveal">
+          <div class="feature-icon">🌏</div>
+          <h3>Global Environment</h3>
+        </div>
+
+        <div class="feature-card glass-card reveal">
+          <div class="feature-icon">📈</div>
+          <h3>Career Growth</h3>
+        </div>
+
+        <div class="feature-card glass-card reveal">
+          <div class="feature-icon">💡</div>
+          <h3>Vietnam Technology Spirit</h3>
+        </div>
+
+        <div class="feature-card glass-card reveal">
+          <div class="feature-icon">✨</div>
+          <h3>Flexible Culture</h3>
+        </div>
+
+        <div class="feature-card glass-card reveal">
+          <div class="feature-icon">🏯</div>
+          <h3>Long-term Stability</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================================================
+       OFFICES
+  ========================================================== -->
+
+  <section id="office">
+
+    <div class="container">
+
+      <div class="section-title reveal">
+        <h2>Office Locations</h2>
+      </div>
+
+      <div class="office-grid">
+
+        <div class="office-card glass-card reveal">
+          <h3>TOKYO (HQ)</h3>
+          <p>〒108-0023</p>
+          <p>東京都港区芝浦3-1-21</p>
+          <p>msb Tamachi 田町ステーションタワーS 10F</p>
+          <p>03-6435-0754</p>
+        </div>
+
+        <div class="office-card glass-card reveal">
+          <h3>NAGOYA</h3>
+          <p>〒460-0002</p>
+          <p>愛知県名古屋市中区丸の内3-20-17</p>
+          <p>KDX桜通ビル2F</p>
+          <p>052-228-4475</p>
+        </div>
+
+        <div class="office-card glass-card reveal">
+          <h3>OSAKA</h3>
+          <p>〒550-0002</p>
+          <p>大阪府大阪市西区江戸堀2-1-1</p>
+          <p>江戸堀センタービル18F</p>
+        </div>
+
+        <div class="office-card glass-card reveal">
+          <h3>FUKUOKA</h3>
+          <p>〒812-0014</p>
+          <p>福岡県福岡市博多区比恵町1-18</p>
+          <p>東カン福岡第2ビル4F 417</p>
+        </div>
+
+        <div class="office-card glass-card reveal">
+          <h3>SAPPORO</h3>
+          <p>〒001-0010</p>
+          <p>北海道札幌市北区北十条西3丁目23-1</p>
+          <p>THE PEAK SAPPORO 1F</p>
+        </div>
+
+        <div class="office-card glass-card reveal">
+          <h3>HOKURIKU</h3>
+          <p>〒920-0031</p>
+          <p>石川県金沢市広岡3丁目1-1</p>
+          <p>金沢パークビル8階</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================================================
+       CTA
+  ========================================================== -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="cta glass-card reveal" style="padding:90px 30px;">
+
+        <h2>
+          Start Your Journey In Japan Today
+        </h2>
 
         <a href="https://www.facebook.com/rikkei.japan.hr"
-          target="_blank"
-          class="btn btn-primary">
-          Join Our Team
-        </a>
-
-        <a href="https://rikkeisoft.com/ja/"
-          target="_blank"
-          class="btn btn-secondary">
-          Explore Company
+           target="_blank"
+           class="btn btn-primary">
+          Apply Now
         </a>
 
       </div>
@@ -510,245 +1167,131 @@
 
   </section>
 
-  <!-- ABOUT -->
-
-  <section>
-
-    <h2 class="section-title" data-aos="fade-up">
-      🌸 About Rikkei Japan
-    </h2>
-
-    <p class="section-desc" data-aos="fade-up">
-      We are building a dynamic international environment where every member can grow professionally,
-      challenge themselves and create impactful technology solutions for the Japanese market.
-    </p>
-
-    <div class="grid">
-
-      <div class="card" data-aos="fade-up">
-
-        <h3>🤝 Human First</h3>
-
-        <p>
-          We believe people are the core of sustainable growth and innovation.
-        </p>
-
-        <ul>
-          <li>Supportive culture</li>
-          <li>Open communication</li>
-          <li>Career development</li>
-        </ul>
-
-      </div>
-
-      <div class="card" data-aos="fade-up">
-
-        <h3>🚀 Career Growth</h3>
-
-        <p>
-          Opportunities to work on large-scale projects and grow globally.
-        </p>
-
-        <ul>
-          <li>PM / Leader path</li>
-          <li>Global projects</li>
-          <li>Training & mentoring</li>
-        </ul>
-
-      </div>
-
-      <div class="card" data-aos="fade-up">
-
-        <h3>🌏 Global Environment</h3>
-
-        <p>
-          Multicultural collaboration across Japan, Vietnam and international offices.
-        </p>
-
-        <ul>
-          <li>Japan × Vietnam culture</li>
-          <li>International teams</li>
-          <li>Global expansion</li>
-        </ul>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- OFFICES -->
-
-  <section>
-
-    <h2 class="section-title" data-aos="fade-up">
-      🏢 Global Offices
-    </h2>
-
-    <p class="section-desc" data-aos="fade-up">
-      Rikkei continues expanding globally with offices across Asia and the United States.
-    </p>
-
-    <div class="grid">
-
-      <div class="card" data-aos="fade-up">
-
-        <h3>🇯🇵 Japan</h3>
-
-        <p>
-          Tokyo<br>
-          Osaka<br>
-          Nagoya<br>
-          Fukuoka
-        </p>
-
-      </div>
-
-      <div class="card" data-aos="fade-up">
-
-        <h3>🇻🇳 Vietnam</h3>
-
-        <p>
-          Hanoi<br>
-          Ho Chi Minh City<br>
-          Da Nang<br>
-          Hue
-        </p>
-
-      </div>
-
-      <div class="card" data-aos="fade-up">
-
-        <h3>🌏 Global Network</h3>
-
-        <p>
-          Bangkok (Thailand)<br>
-          Texas (USA)
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CAREERS -->
-
-  <section>
-
-    <h2 class="section-title" data-aos="fade-up">
-      💼 Career Opportunities
-    </h2>
-
-    <p class="section-desc" data-aos="fade-up">
-      Explore exciting opportunities in engineering, AI, management and corporate functions.
-    </p>
-
-    <div class="grid">
-
-      <div class="card" data-aos="fade-up">
-
-        <h3>💻 Engineering</h3>
-
-        <ul>
-          <li>Backend Developer</li>
-          <li>Frontend Developer</li>
-          <li>Fullstack Engineer</li>
-          <li>AI Engineer</li>
-          <li>QA / Tester</li>
-        </ul>
-
-      </div>
-
-      <div class="card" data-aos="fade-up">
-
-        <h3>🚀 Management</h3>
-
-        <ul>
-          <li>PM / PMO</li>
-          <li>Technical Leader</li>
-          <li>Bridge SE</li>
-          <li>Project Coordinator</li>
-        </ul>
-
-      </div>
-
-      <div class="card" data-aos="fade-up">
-
-        <h3>🏢 Corporate</h3>
-
-        <ul>
-          <li>HR / Recruiter</li>
-          <li>Admin</li>
-          <li>IT Sales</li>
-          <li>Corporate Staff</li>
-        </ul>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- HIGHLIGHT -->
-
-  <section>
-
-    <div class="highlight" data-aos="zoom-in">
-
-      <h2>
-        ✨ Why Rikkei Japan?
-      </h2>
-
-      <p>
-        International projects, clear career paths, exciting technologies and a people-first culture
-        that empowers every individual to grow together.
-      </p>
-
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
 
   <footer>
 
-    <h3>
-      Rikkei Japan Recruitment
-    </h3>
+    <h3 style="margin-bottom:14px;">Rikkei Japan</h3>
 
-    <p>
-      🌐 Website:
-      <a href="https://rikkeisoft.com/ja/" target="_blank">
+    <p style="margin-bottom:10px;">
+      Company Website:
+      <a href="https://rikkeisoft.com/ja/corporate/branch/" target="_blank">
         rikkeisoft.com
       </a>
     </p>
 
-    <p>
-      📘 Facebook:
+    <p style="margin-bottom:20px;">
+      Recruitment Facebook:
       <a href="https://www.facebook.com/rikkei.japan.hr" target="_blank">
-        Rikkei Japan HR
+        facebook.com/rikkei.japan.hr
       </a>
     </p>
 
     <p>
-      📩 Email:
-      tuyendung.japan@rikkeisoft.com
+      © 2026 Rikkei Japan. All Rights Reserved.
     </p>
 
   </footer>
 
-  <!-- AOS -->
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
 
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
+
+    /* =========================================================
+       TYPING EFFECT
+    ========================================================== */
+
+    const text = "Rikkei";
+    const typing = document.getElementById("typing");
+
+    let i = 0;
+
+    function typeEffect(){
+      if(i < text.length){
+        typing.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect,120);
+      }
+    }
+
+    typeEffect();
+
+    /* =========================================================
+       SCROLL REVEAL
+    ========================================================== */
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    function revealOnScroll(){
+
+      reveals.forEach((el)=>{
+
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 80){
+          el.classList.add("active");
+        }
+
+      });
+
+    }
+
+    window.addEventListener("scroll",revealOnScroll);
+
+    revealOnScroll();
+
+    /* =========================================================
+       SAKURA GENERATOR
+    ========================================================== */
+
+    function createSakura(){
+
+      const sakura = document.createElement("div");
+      sakura.classList.add("sakura");
+
+      sakura.style.left = Math.random() * window.innerWidth + "px";
+
+      sakura.style.animationDuration =
+        6 + Math.random() * 8 + "s";
+
+      sakura.style.opacity = Math.random();
+
+      sakura.style.transform =
+        "scale(" + (Math.random() * 1.5) + ")";
+
+      document.body.appendChild(sakura);
+
+      setTimeout(()=>{
+        sakura.remove();
+      },14000);
+
+    }
+
+    setInterval(createSakura,350);
+
+    /* =========================================================
+       PARALLAX
+    ========================================================== */
+
+    window.addEventListener("scroll",()=>{
+
+      const scrolled = window.pageYOffset;
+
+      document.querySelectorAll(".blob").forEach((blob,index)=>{
+
+        blob.style.transform =
+          `translateY(${scrolled * (0.04 + index * 0.02)}px)`;
+
+      });
+
     });
+
   </script>
 
 </body>
-
 </html>
